@@ -4,7 +4,7 @@
  * `overflow: clip` instead of `hidden` if you must crop horizontally).
  */
 .wyzia-cube {
-  --wyzia-cube-bg: #0d0d0f;
+  --wyzia-cube-bg: #000000;
   --wyzia-cube-length: 8;
   position: relative;
   width: 100%;

@@ -52,7 +52,7 @@ const DEFAULTS = {
   gsap: null,
   ScrollTrigger: null,
 
-  background: '#0d0d0f',
+  background: '#000000',
   fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif',
   faceColor: '#dedee2',
   faceInk: '#242830',
@@ -72,7 +72,7 @@ const DEFAULTS = {
     pullback: 0.5, // extra zoom-out between faces
   },
   /** Scroll distance of each beat, in viewport heights. */
-  timeline: { rise: 1.8, settle: 0.45, turn: 0.85, hold: 0.85, lastHold: 0.9 },
+  timeline: { rise: 1.8, settle: 0.45, turn: 0.85, hold: 0.85, lastHold: 0.3 },
 };
 
 /* ------------------------------------------------------------ canvas assets */
