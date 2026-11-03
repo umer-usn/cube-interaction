@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wyzia Scroll Cube</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/wyzia-cube.css">
+  <style>
+    /* Demo filler only: stands in for the rest of the Wyzia page. */
+    html { background: #0d0d0f; }
+    body { margin: 0; font-family: Inter, system-ui, sans-serif; color: #e8e8ec; background: #0d0d0f; }
+    .demo-block { min-height: 80vh; display: grid; place-content: center; text-align: center; padding: 0 24px; gap: 12px; }
+    .demo-block h1, .demo-block h2 { margin: 0; font-weight: 500; letter-spacing: -0.02em; font-size: clamp(2rem, 5vw, 4rem); }
+    .demo-block p { margin: 0; opacity: 0.6; }
+    .demo-after { background: #f4f4f5; color: #111; }
+  </style>
+  <script type="importmap">{ "imports": { "three": "./vendor/three.module.min.js" } }</script>
+  <script src="vendor/gsap.min.js"></script>
+  <script src="vendor/ScrollTrigger.min.js"></script>
+</head>
+<body>
+  <header class="demo-block">
+    <h1>Page content above</h1>
+    <p>Scroll down. This is placeholder content, not part of the component.</p>
+  </header>
+
+  <section id="wyzia-cube" aria-label="How Wyzia keeps you compliant"></section>
+
+  <section class="demo-block demo-after">
+    <h2>Page continues as usual</h2>
+    <p>The cube section has released into normal scrolling.</p>
+  </section>
+
+  <script type="module">
+    import { createWyziaCube } from './src/wyzia-cube.js';
+    import { ICON_FILE, ICON_SLIDERS, ICON_SHIELD } from './src/icons.js';
+
+    window.wyziaCube = createWyziaCube('#wyzia-cube', {
+      items: [
+        { icon: ICON_FILE,    text: 'Registration as a gaming-related supplier in each province' },
+        { icon: ICON_SLIDERS, text: 'Controls built to each regulator’s standards for AML, responsible gambling and player protection' },
+        { icon: ICON_SHIELD,  text: 'Reporting and records that satisfy both the provincial regulator and FINTRAC' },
+      ],
+    });
+  </script>
+</body>
+</html>
