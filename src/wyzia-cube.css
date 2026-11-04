@@ -40,9 +40,7 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background:
-    radial-gradient(ellipse 85% 75% at 50% 52%, transparent 40%, color-mix(in srgb, var(--wyzia-cube-bg) 70%, transparent) 100%),
-    linear-gradient(to bottom, var(--wyzia-cube-bg) 0%, transparent 14%);
+  background: radial-gradient(ellipse 85% 75% at 50% 52%, transparent 40%, color-mix(in srgb, var(--wyzia-cube-bg) 70%, transparent) 100%);
 }
 
 /* The copy lives in the DOM for screen readers and search engines. */
